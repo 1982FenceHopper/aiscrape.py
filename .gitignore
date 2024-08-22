@@ -1,0 +1,4 @@
+.env
+bin/
+pyvenv.cfg
+main.spec
