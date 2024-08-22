@@ -53,7 +53,9 @@ Model to be used
 **Supported Models (Provided by GroqCloud)**
 
 `llama3-groq-70b-8192-tool-use-preview` (Recommended)
+
 `llama3-groq-8b-8192-tool-use-preview` (Works)
+
 `mixtral-8x7b-32768` (NOTE: Broken as of now, trying to figure out what the actual token limit of this model is, considering context window is 32,768 tokens, but i can only request 5,000 a minute??)
 
 ---
