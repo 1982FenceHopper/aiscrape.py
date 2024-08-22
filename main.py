@@ -57,4 +57,4 @@ if __name__ == "__main__":
     print(llm_processed[0])
     print()
     print(llm_processed[1])
-    print(f"{num_tokens_from_string(llm_processed[1], 'cl100k_base')} tokens")
+    print(f"\n[MAIN]: {num_tokens_from_string(llm_processed[1], 'cl100k_base')} word tokens within content response (excluding title)")
