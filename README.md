@@ -72,7 +72,7 @@ From there, `scrape.py` navigates to the website, grabs all the entire HTML docu
 
 From there, `llm.py` binds the first LLM with the schema associated with the website type, and the LangChain `RecursiveCharacterTextSplitter` object is used to split the document into chunks of `8192` tokens, via the `from_tiktoken_encoder` method (LangChain&#39;s method implementation, basically calling a function from the package `tiktoken`). Reason for the split is to ensure the document doesn&#39;t overload the LLM&#39;s context window. As such, if the document IS split, then multiple sequential calls are made.
 
-Basically, we have multiple chunks, each having their own description of the encyclopedia entry/news article. Thats where the second model comes in. The second model decides which description is the best one, and sends us an index number, which is used to access the list of chunks, and return the one the LLM chose. From there, this description is returned back to `main.py`, and `main.py` simply prints it with the title of the entry/article. Also, if there is only one chunk, the second LLM simply
+Basically, we have multiple chunks, each having their own description of the encyclopedia entry/news article. Thats where the second model comes in. The second model decides which description is the best one, and sends us an index number, which is used to access the list of chunks, and return the one the LLM chose. From there, this description is returned back to `main.py`, and `main.py` simply prints it with the title of the entry/article. Also, if there is only one chunk, the second LLM simply just returns the only chunk there is.
 
 ---
 
